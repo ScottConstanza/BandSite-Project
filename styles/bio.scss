@@ -1,13 +1,18 @@
+@use 'partials/variables' as *;
+@use 'partials/typography' as *;
+@use 'partials/mixins' as *;
+
+
 *{
     text-decoration: none;
     padding: 0;
     margin: 0;
+    list-style: none;
+    @include body-font;
 }
 
-
-header{
-    
-
+span{
+    font-weight: 600;
 }
 
 .nav-bar{
@@ -17,18 +22,39 @@ header{
     height: 105px;
     font-size: 24px;
     font-weight: 700;
-    line-height: 32px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
+    line-height: 28px;
+
+    &__ul{
+        @include header-font;
+        font-size: 1.125rem;
+        display: flex;
+        justify-content: space-around; 
+    }
+
+    .nav-bar__logo{
+        padding-top: 2rem;
+        padding-left: 7.5rem;
+        height: 24px;
+    }
+
+    .nav-bar__links{
+        &:visited{
+            color: white;
+        }
+    
+        &:hover{
+            border-bottom: #fafafa 3px solid;
+
+        }
+    }
 }
 
+
+
 .section-header{
-    font-size: 24px;
     line-height: 32px;
     color: white;
+    @include text-font;
 
 }
 
@@ -43,11 +69,84 @@ header{
     padding: 16px;
 }
 
+.about-musicians{
+    padding: 20px;
+}
+
+.about-header{
+    padding-bottom: 18px;
+    @include title-font
+}
+
+.about-text{
+    font-weight: 600;
+    padding-top: 1rem;
+    line-height: 1.6rem;
+    padding-bottom: 0.5rem;
+}
+
+.about-subtitle{
+    @include subheader-font;
+}
+
+.about-sub{
+    padding-bottom: 1.25rem;
+}
+
 .band-image{
     width: 100%;
+}
+
+.photo-header{
+    @include title-font;
+    padding-bottom: 0.5rem
+}
+
+.photo-gallery{
+    background-color: #fafafa;
+    padding: 20px;
+    line-height: 2.5rem;
 }
 
 
 .gallery-photo{
     width: 100%;
+}
+
+
+footer{
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    line-height: 1.30rem;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.footer-icons{
+    word-spacing: 1.25rem;
+    padding-top: 17px;
+}
+
+.footer-text{
+    color: white;
+}
+
+.footer-logo{
+    padding-right: 12rem;
+    padding-top: 4rem;
+    height: 21px;
+    padding-bottom: 24px;
+}
+
+.footer-sub{
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer-copyright{
+    color: white;
+    font-size: 14px;
 }

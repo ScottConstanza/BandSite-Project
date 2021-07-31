@@ -1,7 +1,36 @@
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   text-decoration: none;
   padding: 0;
   margin: 0;
+  list-style: none;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 500;
+  font-size: 19px;
+}
+
+span {
+  font-weight: 600;
 }
 
 .nav-bar {
@@ -11,18 +40,33 @@
   height: 105px;
   font-size: 24px;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 28px;
+}
+.nav-bar__ul {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 300;
+  font-size: 1.125rem;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+.nav-bar .nav-bar__logo {
+  padding-top: 2rem;
+  padding-left: 7.5rem;
+  height: 24px;
+}
+.nav-bar .nav-bar__links:visited {
+  color: white;
+}
+.nav-bar .nav-bar__links:hover {
+  border-bottom: #fafafa 3px solid;
 }
 
 .section-header {
-  font-size: 24px;
   line-height: 32px;
   color: white;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 600;
+  font-size: 30px;
 }
 
 .bees-section {
@@ -36,10 +80,90 @@
   padding: 16px;
 }
 
+.about-musicians {
+  padding: 20px;
+}
+
+.about-header {
+  padding-bottom: 18px;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 600;
+  font-size: 30px;
+  color: #323232;
+}
+
+.about-text {
+  font-weight: 600;
+  padding-top: 1rem;
+  line-height: 1.6rem;
+  padding-bottom: 0.5rem;
+}
+
+.about-subtitle {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 600;
+  padding-bottom: 1.25rem;
+}
+
+.about-sub {
+  padding-bottom: 1.25rem;
+}
+
 .band-image {
   width: 100%;
 }
 
+.photo-header {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 600;
+  font-size: 30px;
+  color: #323232;
+  padding-bottom: 0.5rem;
+}
+
+.photo-gallery {
+  background-color: #fafafa;
+  padding: 20px;
+  line-height: 2.5rem;
+}
+
 .gallery-photo {
   width: 100%;
+}
+
+footer {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  line-height: 1.3rem;
+  padding: 20px;
+  padding-top: 40px;
+}
+
+.footer-icons {
+  word-spacing: 1.25rem;
+  padding-top: 17px;
+}
+
+.footer-text {
+  color: white;
+}
+
+.footer-logo {
+  padding-right: 12rem;
+  padding-top: 4rem;
+  height: 21px;
+  padding-bottom: 24px;
+}
+
+.footer-sub {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer-copyright {
+  color: white;
+  font-size: 14px;
 }/*# sourceMappingURL=bio.css.map */
