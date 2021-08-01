@@ -33,6 +33,11 @@ span{
         align-items: center;
     }
 
+    @include desktop{
+        height: 6vh;
+        padding-left: 7.5rem;
+    }
+
     &__ul{
         @include header-font;
         font-size: 1.125rem;
@@ -46,7 +51,7 @@ span{
 
     .nav-bar__logo{
         padding-top: 2rem;
-        padding-left: 7.5rem;
+        padding-left: 8.5rem;
         height: 24px;
         @include tablet{
             padding-left: 2rem;
@@ -64,9 +69,11 @@ span{
     
         &:hover{
             border-bottom: #fafafa 3px solid;
-            padding-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            
             @include tablet {
-                padding-bottom: 1.25rem;
+                border-bottom: #fafafa 3px solid;
+                padding-bottom: 1.55rem;
             }
         }
     }
@@ -81,6 +88,11 @@ span{
 
     @include tablet{
         font-size:44px;
+    }
+
+    @include desktop{
+        font-size: 55px;
+        padding-left: 7rem;
     }
 }
 
@@ -99,6 +111,12 @@ span{
         width: 92.2%;
         padding: 30px;
     }
+
+    @include desktop{
+        height: 35vh;
+        width: 104.72%;
+        padding: 30px;
+    }
 }
 
 .about-musicians{
@@ -106,6 +124,10 @@ span{
 
     @include tablet{
         padding: 40px;
+    }
+
+    @include desktop{
+        padding-left: 16rem;
     }
 }
 
@@ -128,6 +150,13 @@ span{
         font-size: 27px;
         font-weight: 500;
     }
+
+    @include desktop{
+        font-size: 30px;
+        font-weight: 500;
+        padding: 26px;
+        padding-left: 3rem;
+    }
 }
 
 .about-quote{
@@ -137,6 +166,10 @@ span{
         padding-top: 0.50rem;
         padding-bottom: 3rem;
     }
+
+    @include desktop{
+        padding-left: 3rem;
+    }
 }
 
 .about-subtitle{
@@ -144,6 +177,10 @@ span{
 
     @include tablet{
         font-size: 27px;
+    }
+
+    @include desktop{
+        padding-left: 3rem;
     }
 }
 
@@ -153,6 +190,10 @@ span{
         flex-direction: row;
         line-height: 1.55rem;
         padding: 15px;
+    }
+
+    @include desktop{
+        padding-left: 3rem;
     }
 }
 
@@ -171,6 +212,11 @@ span{
         height: 28vh;
         padding-left: 2.75rem;
     }
+
+    @include desktop{
+        width: 92%;
+        padding-left: 55px;
+    }
 }
 
 .photo-header{
@@ -182,6 +228,11 @@ span{
         padding-bottom: 1rem;
         padding-top: 1rem;
     }
+
+    @include desktop{
+        padding-left: 4rem;
+        padding-bottom: 3rem;
+    }
 }
 
 .photo-gallery{
@@ -192,12 +243,26 @@ span{
     @include tablet{
         padding: 30px;
     }
+
+    @include desktop{
+        padding:30px;
+    }
+
+    @include desktop{
+        padding: 30px;
+        width: 104.5%;
+    }
 }
 
 .photo-media{
     @include tablet {
         line-height: 2.5rem;
         word-spacing: 1.55rem;
+    }
+
+    @include desktop{
+        padding-left: 4rem;
+        line-height: 4rem;
     }
 }
 
@@ -225,7 +290,10 @@ footer{
     @include tablet{
         padding: 40px;
         @include footer-font;
-        
+    }
+
+    @include desktop{
+        width: 103.2%;
     }
 }
 
@@ -254,6 +322,10 @@ footer{
         display: flex;
         gap: 2.5rem;
     }
+
+    @include desktop{
+        padding-left: 7.2rem;
+    }
 }
 
 .footer-logo{
@@ -274,6 +346,10 @@ footer{
         display: inherit;
         padding-left: 9rem;
     }
+
+    @include desktop{
+        padding-left: 34rem;
+    }
 }
 
 .footer-sub{
@@ -287,5 +363,9 @@ footer{
 
     @include tablet{
         padding-top: 2.5rem;
+    }
+
+    @include desktop{
+        padding-left: 7.2rem;
     }
 }

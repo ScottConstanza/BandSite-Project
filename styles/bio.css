@@ -53,6 +53,12 @@ span {
     align-items: center;
   }
 }
+@media (min-width: 1280px) {
+  .nav-bar {
+    height: 6vh;
+    padding-left: 7.5rem;
+  }
+}
 .nav-bar__ul {
   font-family: "AvenirNext LT Pro";
   font-weight: 300;
@@ -67,7 +73,7 @@ span {
 }
 .nav-bar .nav-bar__logo {
   padding-top: 2rem;
-  padding-left: 7.5rem;
+  padding-left: 8.5rem;
   height: 24px;
 }
 @media (min-width: 768px) {
@@ -86,11 +92,12 @@ span {
 }
 .nav-bar .nav-bar__links:hover {
   border-bottom: #fafafa 3px solid;
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem;
 }
 @media (min-width: 768px) {
   .nav-bar .nav-bar__links:hover {
-    padding-bottom: 1.25rem;
+    border-bottom: #fafafa 3px solid;
+    padding-bottom: 1.55rem;
   }
 }
 
@@ -104,6 +111,12 @@ span {
 @media (min-width: 768px) {
   .section-header {
     font-size: 44px;
+  }
+}
+@media (min-width: 1280px) {
+  .section-header {
+    font-size: 55px;
+    padding-left: 7rem;
   }
 }
 
@@ -124,6 +137,13 @@ span {
     padding: 30px;
   }
 }
+@media (min-width: 1280px) {
+  .bees-section {
+    height: 35vh;
+    width: 104.72%;
+    padding: 30px;
+  }
+}
 
 .about-musicians {
   padding: 20px;
@@ -131,6 +151,11 @@ span {
 @media (min-width: 768px) {
   .about-musicians {
     padding: 40px;
+  }
+}
+@media (min-width: 1280px) {
+  .about-musicians {
+    padding-left: 16rem;
   }
 }
 
@@ -159,6 +184,14 @@ span {
     font-weight: 500;
   }
 }
+@media (min-width: 1280px) {
+  .about-text {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 26px;
+    padding-left: 3rem;
+  }
+}
 
 @media (min-width: 768px) {
   .about-quote {
@@ -167,6 +200,11 @@ span {
     padding-bottom: 1.25rem;
     padding-top: 0.5rem;
     padding-bottom: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .about-quote {
+    padding-left: 3rem;
   }
 }
 
@@ -180,6 +218,11 @@ span {
     font-size: 27px;
   }
 }
+@media (min-width: 1280px) {
+  .about-subtitle {
+    padding-left: 3rem;
+  }
+}
 
 @media (min-width: 768px) {
   .about-media {
@@ -187,6 +230,11 @@ span {
     flex-direction: row;
     line-height: 1.55rem;
     padding: 15px;
+  }
+}
+@media (min-width: 1280px) {
+  .about-media {
+    padding-left: 3rem;
   }
 }
 
@@ -210,6 +258,12 @@ span {
     padding-left: 2.75rem;
   }
 }
+@media (min-width: 1280px) {
+  .band-image {
+    width: 92%;
+    padding-left: 55px;
+  }
+}
 
 .photo-header {
   font-family: "AvenirNext LT Pro";
@@ -225,6 +279,12 @@ span {
     padding-top: 1rem;
   }
 }
+@media (min-width: 1280px) {
+  .photo-header {
+    padding-left: 4rem;
+    padding-bottom: 3rem;
+  }
+}
 
 .photo-gallery {
   background-color: #fafafa;
@@ -236,11 +296,28 @@ span {
     padding: 30px;
   }
 }
+@media (min-width: 1280px) {
+  .photo-gallery {
+    padding: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .photo-gallery {
+    padding: 30px;
+    width: 104.5%;
+  }
+}
 
 @media (min-width: 768px) {
   .photo-media {
     line-height: 2.5rem;
     word-spacing: 1.55rem;
+  }
+}
+@media (min-width: 1280px) {
+  .photo-media {
+    padding-left: 4rem;
+    line-height: 4rem;
   }
 }
 
@@ -268,6 +345,11 @@ footer {
     padding: 40px;
     font-family: "AvenirNext LT Pro";
     font-size: 14px;
+  }
+}
+@media (min-width: 1280px) {
+  footer {
+    width: 103.2%;
   }
 }
 
@@ -299,6 +381,11 @@ footer {
     gap: 2.5rem;
   }
 }
+@media (min-width: 1280px) {
+  .footer-text {
+    padding-left: 7.2rem;
+  }
+}
 
 .footer-logo {
   padding-right: 12rem;
@@ -321,6 +408,11 @@ footer {
     padding-left: 9rem;
   }
 }
+@media (min-width: 1280px) {
+  .footer-logo1 {
+    padding-left: 34rem;
+  }
+}
 
 .footer-sub {
   padding-top: 1.5rem;
@@ -334,5 +426,10 @@ footer {
 @media (min-width: 768px) {
   .footer-copyright {
     padding-top: 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-copyright {
+    padding-left: 7.2rem;
   }
 }/*# sourceMappingURL=bio.css.map */
