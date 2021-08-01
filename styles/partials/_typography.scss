@@ -54,3 +54,8 @@
     font-weight: 600;
     padding-bottom: 1.25rem;
 }
+
+@mixin footer-font {
+    font-family: 'AvenirNext LT Pro';
+    font-size: 14px;
+}

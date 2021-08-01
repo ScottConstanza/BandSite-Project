@@ -8,6 +8,9 @@
     padding: 0;
     margin: 0;
     list-style: none;
+}
+
+body{
     @include body-font;
 }
 
@@ -23,28 +26,48 @@ span{
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
+    @include tablet{
+        height: 7vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
     &__ul{
         @include header-font;
         font-size: 1.125rem;
         display: flex;
-        justify-content: space-around; 
+        justify-content: space-around;
+        
+        @include tablet{
+            padding-left: 3rem;
+        }
     }
 
     .nav-bar__logo{
         padding-top: 2rem;
         padding-left: 7.5rem;
         height: 24px;
+        @include tablet{
+            padding-left: 2rem;
+            padding-bottom: 1.5rem;
+        }
     }
 
     .nav-bar__links{
         &:visited{
             color: white;
         }
+        @include tablet{
+            padding-right: 3rem;
+        }
     
         &:hover{
             border-bottom: #fafafa 3px solid;
-
+            padding-bottom: 1rem;
+            @include tablet {
+                padding-bottom: 1.25rem;
+            }
         }
     }
 }
@@ -56,6 +79,9 @@ span{
     color: white;
     @include text-font;
 
+    @include tablet{
+        font-size:44px;
+    }
 }
 
 .bees-section{
@@ -67,15 +93,29 @@ span{
     display: flex;
     align-items: center;
     padding: 16px;
+
+    @include tablet{
+        height: 36vh;
+        width: 92.2%;
+        padding: 30px;
+    }
 }
 
 .about-musicians{
     padding: 20px;
+
+    @include tablet{
+        padding: 40px;
+    }
 }
 
 .about-header{
     padding-bottom: 18px;
-    @include title-font
+    @include title-font;
+
+    @include tablet{
+        font-size: 38px;
+    }
 }
 
 .about-text{
@@ -83,34 +123,91 @@ span{
     padding-top: 1rem;
     line-height: 1.6rem;
     padding-bottom: 0.5rem;
+
+    @include tablet{
+        font-size: 27px;
+        font-weight: 500;
+    }
+}
+
+.about-quote{
+
+    @include tablet{
+        @include subheader-font;
+        padding-top: 0.50rem;
+        padding-bottom: 3rem;
+    }
 }
 
 .about-subtitle{
     @include subheader-font;
+
+    @include tablet{
+        font-size: 27px;
+    }
+}
+
+.about-media{
+    @include tablet{
+        display: flex;
+        flex-direction: row;
+        line-height: 1.55rem;
+        padding: 15px;
+    }
 }
 
 .about-sub{
     padding-bottom: 1.25rem;
+    @include tablet{
+        padding-bottom: 1.25rem;
+        padding-right: 1.55rem;
+    }
 }
 
 .band-image{
     width: 100%;
+    @include tablet{
+        width: 84%;
+        height: 28vh;
+        padding-left: 2.75rem;
+    }
 }
 
 .photo-header{
     @include title-font;
-    padding-bottom: 0.5rem
+    padding-bottom: 0.5rem;
+
+    @include tablet{
+        font-size: 38px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
 }
 
 .photo-gallery{
     background-color: #fafafa;
     padding: 20px;
     line-height: 2.5rem;
+
+    @include tablet{
+        padding: 30px;
+    }
+}
+
+.photo-media{
+    @include tablet {
+        line-height: 2.5rem;
+        word-spacing: 1.55rem;
+    }
 }
 
 
 .gallery-photo{
     width: 100%;
+
+    @include tablet{
+        width: 30%;
+    }
 }
 
 
@@ -123,15 +220,40 @@ footer{
     line-height: 1.30rem;
     padding: 20px;
     padding-top: 40px;
+    
+
+    @include tablet{
+        padding: 40px;
+        @include footer-font;
+        
+    }
+}
+
+.footer-media{
+    @include tablet{
+        display: flex;
+        padding-bottom: 1.5rem;
+    }
 }
 
 .footer-icons{
     word-spacing: 1.25rem;
     padding-top: 17px;
+
+    @include tablet{
+        padding-left: 2rem;
+        word-spacing: 1.5rem;
+        padding-top: 0.5rem;
+    }
 }
 
 .footer-text{
     color: white;
+
+    @include tablet{
+        display: flex;
+        gap: 2.5rem;
+    }
 }
 
 .footer-logo{
@@ -139,6 +261,19 @@ footer{
     padding-top: 4rem;
     height: 21px;
     padding-bottom: 24px;
+
+    @include tablet{
+        display: none;
+    }
+}
+
+.footer-logo1{
+    display: none;
+
+    @include tablet{
+        display: inherit;
+        padding-left: 9rem;
+    }
 }
 
 .footer-sub{
@@ -149,4 +284,8 @@ footer{
 .footer-copyright{
     color: white;
     font-size: 14px;
+
+    @include tablet{
+        padding-top: 2.5rem;
+    }
 }
