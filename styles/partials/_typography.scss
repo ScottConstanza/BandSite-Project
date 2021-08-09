@@ -73,3 +73,17 @@
     font-weight: 600;
     color: #afafaf;
 }
+
+@mixin comments-smalltext {
+    font-family: 'AvenirNext LT Pro';
+    font-size: 12px;
+    font-weight: 600;
+    color: #afafaf;
+}
+
+@mixin placeholder-text {
+    font-family: 'AvenirNext LT Pro';
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
