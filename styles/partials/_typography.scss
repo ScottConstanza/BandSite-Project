@@ -59,3 +59,17 @@
     font-family: 'AvenirNext LT Pro';
     font-size: 14px;
 }
+
+@mixin shows-text {
+    font-family: 'AvenirNext LT Pro';
+    font-size: large;
+    font-weight: 500;
+}
+
+@mixin shows-smalltext {
+    font-family: 'AvenirNext LT Pro';
+    font-size: small;
+    padding-top: 1rem;
+    font-weight: 600;
+    color: #afafaf;
+}

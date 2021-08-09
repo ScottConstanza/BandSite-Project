@@ -1,0 +1,294 @@
+@use 'partials/variables' as *;
+@use 'partials/typography' as *;
+@use 'partials/mixins' as *;
+
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body{
+    @include body-font;
+    width: 100%;
+}
+
+span{
+    font-weight: 600;
+}
+
+.section-header{
+    line-height: 32px;
+    color: white;
+    @include text-font;
+
+    @include tablet{
+        font-size:44px;
+    }
+
+    @include desktop{
+        font-size: 55px;
+        padding-left: 7rem;
+    }
+}
+
+.nav-bar{
+    color: white;
+    background-color: #323232;
+    width: 100%;
+    height: 105px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    @include tablet{
+        height: 7vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    @include desktop{
+        height: 6vh;
+        padding-left: 7.5rem;
+    }
+
+    &__ul{
+        @include header-font;
+        font-size: 1.125rem;
+        display: flex;
+        justify-content: space-around;
+        
+        @include tablet{
+            padding-left: 3rem;
+        }
+    }
+
+    .nav-bar__logo{
+        padding-top: 2rem;
+        padding-left: 9rem;
+        height: 24px;
+        @include tablet{
+            padding-left: 2rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    .nav-bar__links{
+        &:visited{
+            color: white;
+        }
+        @include tablet{
+            padding-right: 3rem;
+        }
+    
+        &:hover{
+            border-bottom: #fafafa 3px solid;
+            padding-bottom: 0.75rem;
+            
+            @include tablet {
+                border-bottom: #fafafa 3px solid;
+                padding-bottom: 1.55rem;
+            }
+        }
+    }
+}
+
+
+.hero-text{
+    line-height: 32px;
+    color: white;
+    font-size: 29px;
+    padding-bottom: 2rem;
+    @include text-font;
+
+    @include tablet{
+        font-size:44px;
+    }
+
+    @include desktop{
+        font-size: 55px;
+        padding-left: 7rem;
+    }
+}
+
+.hero-section{
+    background-image: url(/assets/images/hero-shows.jpg);
+    height: 332px;
+    background-size: cover;
+    background-position: center;
+    width: 92.5%;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+
+    @include tablet{
+        height: 36vh;
+        width: 92.2%;
+        padding: 30px;
+    }
+
+    @include desktop{
+        height: 35vh;
+        width: 104.72%;
+        padding: 30px;
+    }
+}
+
+.hero-song{
+    
+}
+
+.shows-division{
+    display: block;
+}
+
+.shows-text{
+    position: absolute;
+    bottom: 33rem;
+    left: 1rem;
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    @include shows-text;
+
+    @include tablet{
+        font-size:44px;
+    }
+
+    @include desktop{
+        font-size: 55px;
+        padding-left: 7rem;
+    }
+}
+
+.shows-smalltext{
+    @include shows-smalltext
+}
+
+.shows-subtext{
+    font-weight: 600;
+}
+
+.shows-button{
+    background-color: #323232;
+    width: 24rem;
+    height: 3rem;
+    margin-top: 1.5rem;
+    border-radius: 7px;
+    color: white;
+    font-size: large;
+}
+
+
+.shows-section{
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    padding: 20px;
+    border-bottom: inset;
+}
+
+.shows-subheader{
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+
+
+footer{
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    line-height: 1.30rem;
+    padding: 20px;
+    padding-top: 40px;
+    
+
+    @include tablet{
+        padding: 40px;
+        @include footer-font;
+    }
+
+    @include desktop{
+        width: 103.2%;
+    }
+}
+
+.footer-media{
+    @include tablet{
+        display: flex;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.footer-icons{
+    word-spacing: 1.25rem;
+    padding-top: 17px;
+
+    @include tablet{
+        padding-left: 2rem;
+        word-spacing: 1.5rem;
+        padding-top: 0.5rem;
+    }
+}
+
+.footer-text{
+    color: white;
+
+    @include tablet{
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    @include desktop{
+        padding-left: 7.2rem;
+    }
+}
+
+.footer-logo{
+    padding-right: 12rem;
+    padding-top: 4rem;
+    height: 21px;
+    padding-bottom: 24px;
+
+    @include tablet{
+        display: none;
+    }
+}
+
+.footer-logo1{
+    display: none;
+
+    @include tablet{
+        display: inherit;
+        padding-left: 9rem;
+    }
+
+    @include desktop{
+        padding-left: 34rem;
+    }
+}
+
+.footer-sub{
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer-copyright{
+    color: white;
+    font-size: 14px;
+
+    @include tablet{
+        padding-top: 2.5rem;
+    }
+
+    @include desktop{
+        padding-left: 7.2rem;
+    }
+}
