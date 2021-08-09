@@ -42,14 +42,14 @@ span{
     font-weight: 700;
     line-height: 28px;
     @include tablet{
-        height: 7vh;
+        height: 10vh;
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
     @include desktop{
-        height: 6vh;
+        height: 11vh;
         padding-left: 7.5rem;
     }
 
@@ -61,6 +61,12 @@ span{
         
         @include tablet{
             padding-left: 3rem;
+            font-size: 0.75rem;
+        }
+
+        @include desktop{
+            padding-left: 3rem;
+            font-size: 0.75rem;
         }
     }
 
@@ -103,13 +109,27 @@ span{
     @include text-font;
 
     @include tablet{
-        font-size:44px;
+        font-size: 41px;
+        word-spacing: 0.15rem;
+        line-height: 3.25rem;
     }
 
     @include desktop{
-        font-size: 55px;
+        font-size: 60px;
         padding-left: 7rem;
+        line-height: 4.5rem;
     }
+}
+
+.hero-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #323232;
+    opacity: .5;
+    z-index: -1;
 }
 
 .hero-section{
@@ -119,24 +139,49 @@ span{
     background-position: center;
     width: 92.5%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
     padding: 16px;
+    line-height: 4rem;
+    position: relative;
+    z-index: 1;
 
     @include tablet{
-        height: 36vh;
+        height: 65vh;
         width: 92.2%;
         padding: 30px;
     }
 
     @include desktop{
-        height: 35vh;
+        height: 88vh;
         width: 104.72%;
         padding: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
 .hero-song{
-    
+    width: 98%;
+
+
+    @include tablet{
+        width: 51%;
+        height: 19vh;
+        padding-top: 2rem;
+    }
+
+    @include desktop{
+        width: 30%;
+        height: 19vh;
+        padding-top: 3rem;
+        padding-left: 7rem;
+    }
+}
+
+.shows-containers{
+    padding: 20px;
 }
 
 .shows-division{
@@ -144,20 +189,17 @@ span{
 }
 
 .shows-text{
-    position: absolute;
-    bottom: 33rem;
-    left: 1rem;
     color: white;
     font-size: large;
     font-weight: 500;
     @include shows-text;
 
     @include tablet{
-        font-size:44px;
+        font-size:20px;
     }
 
     @include desktop{
-        font-size: 55px;
+        font-size: 29px;
         padding-left: 7rem;
     }
 }
@@ -172,12 +214,21 @@ span{
 
 .shows-button{
     background-color: #323232;
-    width: 24rem;
+    width: 21.5rem;
     height: 3rem;
     margin-top: 1.5rem;
     border-radius: 7px;
     color: white;
     font-size: large;
+
+    @include tablet{
+        margin-left: 7rem;
+        width: 12.5rem;
+    }
+
+    @include desktop{
+        margin-left: 0;
+    }
 }
 
 
@@ -187,6 +238,20 @@ span{
     line-height: 2rem;
     padding: 20px;
     border-bottom: inset;
+
+    @include tablet{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 20rem;
+    }
 }
 
 .shows-subheader{
@@ -194,6 +259,12 @@ span{
     font-weight: 600;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    @include desktop{
+        margin-left: 6rem;
+        position: absolute;
+        top: 57rem;
+    }
 }
 
 

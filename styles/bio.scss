@@ -27,14 +27,14 @@ span{
     font-weight: 700;
     line-height: 28px;
     @include tablet{
-        height: 7vh;
+        height: 10vh;
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
     @include desktop{
-        height: 6vh;
+        height: 11vh;
         padding-left: 7.5rem;
     }
 
@@ -107,13 +107,13 @@ span{
     padding: 16px;
 
     @include tablet{
-        height: 36vh;
+        height: 58vh;
         width: 92.2%;
         padding: 30px;
     }
 
     @include desktop{
-        height: 35vh;
+        height: 77vh;
         width: 104.72%;
         padding: 30px;
     }
@@ -209,7 +209,7 @@ span{
     width: 100%;
     @include tablet{
         width: 84%;
-        height: 28vh;
+        height: 52vh;
         padding-left: 2.75rem;
     }
 
