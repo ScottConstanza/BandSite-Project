@@ -518,10 +518,12 @@ span {
     padding-left: 30.19rem;
   }
 }
-.view-date .view-text {
+
+.view-text {
   margin: 0;
 }
-.view-date footer {
+
+footer {
   background-color: #323232;
   display: flex;
   flex-direction: column;
@@ -532,88 +534,95 @@ span {
   padding-top: 40px;
 }
 @media (min-width: 768px) {
-  .view-date footer {
+  footer {
     padding: 40px;
     font-family: "AvenirNext LT Pro";
     font-size: 14px;
   }
 }
 @media (min-width: 1280px) {
-  .view-date footer {
+  footer {
     width: 103.2%;
   }
 }
+
 @media (min-width: 768px) {
-  .view-date .footer-media {
+  .footer-media {
     display: flex;
     padding-bottom: 1.5rem;
   }
 }
-.view-date .footer-icons {
+
+.footer-icons {
   word-spacing: 1.25rem;
   padding-top: 17px;
 }
 @media (min-width: 768px) {
-  .view-date .footer-icons {
+  .footer-icons {
     padding-left: 2rem;
     word-spacing: 1.5rem;
     padding-top: 0.5rem;
   }
 }
-.view-date .footer-text {
+
+.footer-text {
   color: white;
 }
 @media (min-width: 768px) {
-  .view-date .footer-text {
+  .footer-text {
     display: flex;
     gap: 2.5rem;
   }
 }
 @media (min-width: 1280px) {
-  .view-date .footer-text {
+  .footer-text {
     padding-left: 7.2rem;
   }
 }
-.view-date .footer-logo {
+
+.footer-logo {
   padding-right: 12rem;
   padding-top: 4rem;
   height: 21px;
   padding-bottom: 24px;
 }
 @media (min-width: 768px) {
-  .view-date .footer-logo {
+  .footer-logo {
     display: none;
   }
 }
-.view-date .footer-logo1 {
+
+.footer-logo1 {
   display: none;
 }
 @media (min-width: 768px) {
-  .view-date .footer-logo1 {
+  .footer-logo1 {
     display: inherit;
     padding-left: 9rem;
   }
 }
 @media (min-width: 1280px) {
-  .view-date .footer-logo1 {
+  .footer-logo1 {
     padding-left: 34rem;
   }
 }
-.view-date .footer-sub {
+
+.footer-sub {
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
 }
-.view-date .footer-copyright {
+
+.footer-copyright {
   color: white;
   font-size: 14px;
 }
 @media (min-width: 768px) {
-  .view-date .footer-copyright {
+  .footer-copyright {
     padding-top: 2.5rem;
   }
 }
 @media (min-width: 1280px) {
-  .view-date .footer-copyright {
+  .footer-copyright {
     padding-left: 7.2rem;
   }
 }/*# sourceMappingURL=bio.css.map */
