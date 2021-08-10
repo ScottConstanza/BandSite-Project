@@ -372,6 +372,8 @@ span {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  border-bottom: inset;
+  padding-bottom: 1rem;
 }
 
 .comments-smalltext {
@@ -403,6 +405,43 @@ span {
 
 .forms-container {
   padding-left: 1.5rem;
+}
+
+.placeholder-image {
+  border-radius: 50%;
+  min-height: 36px;
+  min-width: 36px;
+  background-color: #e1e1e1;
+}
+
+.view-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 2rem;
+  gap: 1rem;
+  border-bottom: inset;
+  padding-bottom: 1rem;
+}
+
+.view-comments {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.view-name {
+  padding-right: 5rem;
+  font-weight: 600;
+}
+
+.view-date {
+  color: #afafaf;
+}
+
+.view-text {
+  margin: 0;
 }
 
 footer {
