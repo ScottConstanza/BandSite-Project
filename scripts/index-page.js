@@ -21,40 +21,70 @@ let defaultComment = [
 
 const commentSection = document.querySelector(".comments-section");
 
-defaultComment.forEach((comment) => {
-    const viewContainer = document.createElement('div');
-    viewContainer.classList.add("view-container");
-    commentSection.appendChild(viewContainer);
-
+function displayAllComments(){
+    defaultComment.forEach((comment) => {
+        const viewContainer = document.createElement('div');
+        viewContainer.classList.add("view-container");
+        commentSection.appendChild(viewContainer);
     
-    const placeHolder = document.createElement('div');
-    placeHolder.classList.add("view-container");
-    viewContainer.appendChild(placeHolder);
-
-
-    const viewComments = document.createElement('div')
-    viewComments.classList.add("view-comments");
-    viewContainer.appendChild(viewComments);
-
-
-    const viewName = document.createElement('p');
-    viewName.classList.add("view-name");
-    viewName.innerText = comment.name;
-    viewComments.appendChild(viewName);
-
-    const viewDate = document.createElement('p');
-    viewDate.classList.add("view-date");
-    viewDate.innerText = comment.date;
-    viewComments.appendChild(viewDate);
-
-
-    const viewText = document.createElement('p');
-    viewText.classList.add("view-text");
-    viewText.innerText = comment.text;
-    viewComments.appendChild(viewText);
+        
+        const placeHolder = document.createElement('div');
+        placeHolder.classList.add("placeholder-image");
+        viewContainer.appendChild(placeHolder);
+    
+    
+        const viewComments = document.createElement('div')
+        viewComments.classList.add("view-comments");
+        viewContainer.appendChild(viewComments);
+    
+    
+        const viewName = document.createElement('p');
+        viewName.classList.add("view-name");
+        viewName.innerText = comment.name;
+        viewComments.appendChild(viewName);
+    
+        const viewDate = document.createElement('p');
+        viewDate.classList.add("view-date");
+        viewDate.innerText = comment.date;
+        viewComments.appendChild(viewDate);
+    
+    
+        const viewText = document.createElement('p');
+        viewText.classList.add("view-text");
+        viewText.innerText = comment.text;
+        viewComments.appendChild(viewText);
+    }
+    )
 }
-)
 
+
+const commentsForm = document.querySelector(".comments-form");
+commentsForm.addEventListener('submit', (b)  => {
+    b.preventDefault();
+    if(b.target.user_name.value === '') {
+        return;
+    }
+
+    if(b.target.user_comment.value === '') {
+        return;
+    }
+
+    const newComment = {
+        name: b.target.user_name.value,
+        date: new Date().toLocaleDateString(),
+        text: b.target.user_comment.value
+    }
+    
+    defaultComment.unshift(newComment);
+    const viewContainers = document.querySelectorAll(".view-container");
+    viewContainers.forEach((container)  => {
+        container.remove()
+    })
+    displayAllComments();
+    b.target.reset();
+})
+
+displayAllComments();
 
 
 

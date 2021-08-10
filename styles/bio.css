@@ -333,12 +333,34 @@ span {
 .comments-section {
   padding: 20px;
 }
+@media (min-width: 768px) {
+  .comments-section {
+    padding: 40px;
+  }
+}
+@media (min-width: 1280px) {
+  .comments-section {
+    padding: 60px;
+  }
+}
 
 .comments-image {
   border-radius: 50%;
   height: 36px;
   width: 36px;
   margin-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .comments-image {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media (min-width: 1280px) {
+  .comments-image {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .name {
@@ -352,6 +374,11 @@ span {
   font-size: 15px;
   font-weight: 500;
   color: black;
+}
+@media (min-width: 768px) {
+  .name {
+    width: 32rem;
+  }
 }
 
 .comments {
@@ -367,6 +394,16 @@ span {
   font-weight: 500;
   color: black;
 }
+@media (min-width: 768px) {
+  .comments {
+    width: 32rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments {
+    height: 12vh;
+  }
+}
 
 .comments-form {
   display: flex;
@@ -374,6 +411,16 @@ span {
   align-items: flex-start;
   border-bottom: inset;
   padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .comments-form {
+    margin-left: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments-form {
+    padding-left: 14rem;
+  }
 }
 
 .comments-smalltext {
@@ -402,9 +449,25 @@ span {
   color: white;
   font-size: large;
 }
+@media (min-width: 768px) {
+  .comments-button {
+    width: 11.2rem;
+    margin-left: 23.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments-button {
+    margin-left: 21.5rem;
+  }
+}
 
 .forms-container {
   padding-left: 1.5rem;
+}
+@media (min-width: 768px) {
+  .forms-container {
+    padding-left: 0.75rem;
+  }
 }
 
 .placeholder-image {
@@ -412,6 +475,12 @@ span {
   min-height: 36px;
   min-width: 36px;
   background-color: #e1e1e1;
+}
+@media (min-width: 768px) {
+  .placeholder-image {
+    min-height: 50px;
+    min-width: 50px;
+  }
 }
 
 .view-container {
@@ -439,12 +508,20 @@ span {
 .view-date {
   color: #afafaf;
 }
-
-.view-text {
+@media (min-width: 768px) {
+  .view-date {
+    padding-left: 18.19rem;
+  }
+}
+@media (min-width: 1280px) {
+  .view-date {
+    padding-left: 30.19rem;
+  }
+}
+.view-date .view-text {
   margin: 0;
 }
-
-footer {
+.view-date footer {
   background-color: #323232;
   display: flex;
   flex-direction: column;
@@ -455,95 +532,88 @@ footer {
   padding-top: 40px;
 }
 @media (min-width: 768px) {
-  footer {
+  .view-date footer {
     padding: 40px;
     font-family: "AvenirNext LT Pro";
     font-size: 14px;
   }
 }
 @media (min-width: 1280px) {
-  footer {
+  .view-date footer {
     width: 103.2%;
   }
 }
-
 @media (min-width: 768px) {
-  .footer-media {
+  .view-date .footer-media {
     display: flex;
     padding-bottom: 1.5rem;
   }
 }
-
-.footer-icons {
+.view-date .footer-icons {
   word-spacing: 1.25rem;
   padding-top: 17px;
 }
 @media (min-width: 768px) {
-  .footer-icons {
+  .view-date .footer-icons {
     padding-left: 2rem;
     word-spacing: 1.5rem;
     padding-top: 0.5rem;
   }
 }
-
-.footer-text {
+.view-date .footer-text {
   color: white;
 }
 @media (min-width: 768px) {
-  .footer-text {
+  .view-date .footer-text {
     display: flex;
     gap: 2.5rem;
   }
 }
 @media (min-width: 1280px) {
-  .footer-text {
+  .view-date .footer-text {
     padding-left: 7.2rem;
   }
 }
-
-.footer-logo {
+.view-date .footer-logo {
   padding-right: 12rem;
   padding-top: 4rem;
   height: 21px;
   padding-bottom: 24px;
 }
 @media (min-width: 768px) {
-  .footer-logo {
+  .view-date .footer-logo {
     display: none;
   }
 }
-
-.footer-logo1 {
+.view-date .footer-logo1 {
   display: none;
 }
 @media (min-width: 768px) {
-  .footer-logo1 {
+  .view-date .footer-logo1 {
     display: inherit;
     padding-left: 9rem;
   }
 }
 @media (min-width: 1280px) {
-  .footer-logo1 {
+  .view-date .footer-logo1 {
     padding-left: 34rem;
   }
 }
-
-.footer-sub {
+.view-date .footer-sub {
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
 }
-
-.footer-copyright {
+.view-date .footer-copyright {
   color: white;
   font-size: 14px;
 }
 @media (min-width: 768px) {
-  .footer-copyright {
+  .view-date .footer-copyright {
     padding-top: 2.5rem;
   }
 }
 @media (min-width: 1280px) {
-  .footer-copyright {
+  .view-date .footer-copyright {
     padding-left: 7.2rem;
   }
 }/*# sourceMappingURL=bio.css.map */
