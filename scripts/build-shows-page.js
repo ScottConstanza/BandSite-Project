@@ -95,6 +95,7 @@ function displayShows(show){
         const showsDivisionV = document.createElement('div');
         showsDivisionV.classList.add("shows-division");
         showsSection.appendChild(showsDivisionV);
+        
 
         const showsTextV = document.createElement('p');
         showsTextV.classList.add("shows-smalltext");
