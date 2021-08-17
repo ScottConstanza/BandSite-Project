@@ -61,7 +61,7 @@ span{
         
         @include tablet{
             padding-left: 3rem;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
         }
 
         @include desktop{
@@ -77,6 +77,7 @@ span{
         @include tablet{
             padding-left: 2rem;
             padding-bottom: 1.5rem;
+            height: 3vh;
         }
     }
 

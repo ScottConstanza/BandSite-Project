@@ -1,42 +1,62 @@
 
-let showsList = [
-    {
-        date: 'Mon Sept 06 2021',
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA',
-    },
+// let showsList = [
+//     {
+//         date: 'Mon Sept 06 2021',
+//         venue: 'Ronald Lane',
+//         location: 'San Francisco, CA',
+//     },
 
-    {
-        date: 'Tue Sept 21 2021',
-        venue: 'Pier 3 East',
-        location: 'San Francisco, CA',
-    },
+//     {
+//         date: 'Tue Sept 21 2021',
+//         venue: 'Pier 3 East',
+//         location: 'San Francisco, CA',
+//     },
     
-    {
-        date: 'Fri Oct 06 2021',
-        venue: 'View Lounge',
-        location: 'San Francisco, CA',
-    },
+//     {
+//         date: 'Fri Oct 06 2021',
+//         venue: 'View Lounge',
+//         location: 'San Francisco, CA',
+//     },
 
-    {
-        date: 'Sat Nov 06 2021',
-        venue: 'Hyatt Agency',
-        location: 'San Francisco, CA',
-    },
+//     {
+//         date: 'Sat Nov 06 2021',
+//         venue: 'Hyatt Agency',
+//         location: 'San Francisco, CA',
+//     },
 
-    {
-        date: 'Fri Nov 26 2021',
-        venue: 'Moscow Center',
-        location: 'San Francisco, CA',
-    },
+//     {
+//         date: 'Fri Nov 26 2021',
+//         venue: 'Moscow Center',
+//         location: 'San Francisco, CA',
+//     },
 
-    {
-        date: 'Wed Dec 15 2021',
-        venue: 'Press Club',
-        location: 'San Francisco, CA',
-    }
+//     {
+//         date: 'Wed Dec 15 2021',
+//         venue: 'Press Club',
+//         location: 'San Francisco, CA',
+//     }
 
-]
+// ]
+
+
+let shows =[]
+
+let apiKeyy = "cb39efe6-7135-448f-8ccc-0d37be500d2c"
+let liveShows = `https://project-1-api.herokuapp.com/showdates?api_key=${apiKeyy}`
+
+const userShows = () => {
+    axios.get(liveShows).then(result => {
+        // userShows = result.data;
+        // (userShows);
+        // console.log(userShows);
+        displayShows(result.data);
+    })
+}
+
+const date =
+
+userShows();
+
 
 const showsContainer = document.querySelector(".shows-containers");
 const showsHeading = document.createElement('h2');
@@ -47,68 +67,70 @@ showsContainer.appendChild(showsHeading);
 // forEach iterates through each item in the array above until it gets to the bottom on the array list.
 // Try and find the pattern, if something repeats then make it once as a template to put in a loop.
 
+function displayShows(show){
 
-showsList.forEach((show) => {
-    const showsSection = document.createElement('section');
-    showsSection.classList.add("shows-section");
-    showsContainer.appendChild(showsSection);
-
-
-    const showsDivision = document.createElement('div');
-    showsDivision.classList.add("shows-division");
-    showsSection.appendChild(showsDivision);
+    show.forEach((show) => {
+        const showsSection = document.createElement('section');
+        showsSection.classList.add("shows-section");
+        showsContainer.appendChild(showsSection);
 
 
-    const showsText = document.createElement('p');
-    showsText.classList.add("shows-smalltext");
-    showsText.innerText = "DATES"
-    showsDivision.appendChild(showsText);
+        const showsDivision = document.createElement('div');
+        showsDivision.classList.add("shows-division");
+        showsSection.appendChild(showsDivision);
 
-    const showsDate = document.createElement('p');
-    showsDate.classList.add("shows-subtext")
-    showsDate.innerText= show.date;
-    showsDivision.appendChild(showsDate);
 
-    // 2nd Div within the section (Venue)
+        const showsText = document.createElement('p');
+        showsText.classList.add("shows-smalltext");
+        showsText.innerText = "DATES"
+        showsDivision.appendChild(showsText);
 
-    const showsDivisionV = document.createElement('div');
-    showsDivisionV.classList.add("shows-division");
-    showsSection.appendChild(showsDivisionV);
+        const showsDate = document.createElement('p');
+        showsDate.classList.add("shows-subtext")
+        showsDate.innerText= show.date;
+        showsDivision.appendChild(showsDate);
 
-    const showsTextV = document.createElement('p');
-    showsTextV.classList.add("shows-smalltext");
-    showsTextV.innerText = "VENUE"
-    showsDivisionV.appendChild(showsTextV);
+        // 2nd Div within the section (Venue)
 
-    const showsVenue = document.createElement('p');
-    showsVenue.innerText= show.venue;
-    showsDivisionV.appendChild(showsVenue);
+        const showsDivisionV = document.createElement('div');
+        showsDivisionV.classList.add("shows-division");
+        showsSection.appendChild(showsDivisionV);
 
-    // 3rd Div within the Section (Location)
+        const showsTextV = document.createElement('p');
+        showsTextV.classList.add("shows-smalltext");
+        showsTextV.innerText = "VENUE"
+        showsDivisionV.appendChild(showsTextV);
 
-    const showsDivisionL = document.createElement('div');
-    showsDivisionL.classList.add("shows-division");
-    showsSection.appendChild(showsDivisionL);
+        const showsVenue = document.createElement('p');
+        showsVenue.innerText= show.place;
+        showsDivisionV.appendChild(showsVenue);
 
-    const showsTextL = document.createElement('p');
-    showsTextL.classList.add("shows-smalltext");
-    showsTextL.innerText = "LOCATION"
-    showsDivisionL.appendChild(showsTextL);
+        // 3rd Div within the Section (Location)
 
-    const showsLocation = document.createElement('p');
-    showsLocation.innerText= show.location;
-    showsDivisionL.appendChild(showsLocation);
+        const showsDivisionL = document.createElement('div');
+        showsDivisionL.classList.add("shows-division");
+        showsSection.appendChild(showsDivisionL);
 
-    const buttonElement = document.createElement('button');
-    buttonElement.classList.add("shows-button");
-    buttonElement.innerText= "BUY TICKETS";
-    showsSection.appendChild(buttonElement);
-    buttonElement.addEventListener('click', (e) => {
-        console.log(show.venue);
-    })
+        const showsTextL = document.createElement('p');
+        showsTextL.classList.add("shows-smalltext");
+        showsTextL.innerText = "LOCATION"
+        showsDivisionL.appendChild(showsTextL);
 
+        const showsLocation = document.createElement('p');
+        showsLocation.innerText= show.location;
+        showsDivisionL.appendChild(showsLocation);
+
+        const buttonElement = document.createElement('button');
+        buttonElement.classList.add("shows-button");
+        buttonElement.innerText= "BUY TICKETS";
+        showsSection.appendChild(buttonElement);
+        buttonElement.addEventListener('click', (e) => {
+            console.log(show.venue);
+        })
+
+    }
+    )
 }
-)
 
 
 

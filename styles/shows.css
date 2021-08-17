@@ -89,7 +89,7 @@ span {
 @media (min-width: 768px) {
   .nav-bar__ul {
     padding-left: 3rem;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 }
 @media (min-width: 1280px) {
@@ -107,6 +107,7 @@ span {
   .nav-bar .nav-bar__logo {
     padding-left: 2rem;
     padding-bottom: 1.5rem;
+    height: 3vh;
   }
 }
 .nav-bar .nav-bar__links:visited {

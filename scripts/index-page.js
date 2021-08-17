@@ -26,9 +26,9 @@ let liveComments = `https://project-1-api.herokuapp.com/comments?api_key=${apiKe
 
 const userComments = () => {
     axios.get(liveComments).then(result => {
-        console.log(result.data);
+        // console.log(result.data);
         // comments = result.data;
-        displayAllComments(result.data);
+        displayAllComments(result.data.reverse());
     })
 }
 
