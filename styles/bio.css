@@ -510,6 +510,7 @@ span {
   gap: 1rem;
   border-bottom: inset;
   padding-bottom: 1rem;
+  width: 99%;
 }
 
 .view-comments {

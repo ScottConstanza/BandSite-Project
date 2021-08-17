@@ -24,21 +24,23 @@ let comments =[]
 let apiKey = "cb39efe6-7135-448f-8ccc-0d37be500d2c"
 let liveComments = `https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`
 
-axios.get(liveComments).then(result => {
-    console.log(result.data);
-    // comments = result.data;
-    displayAllComments(result.data);
-})
+const userComments = () => {
+    axios.get(liveComments).then(result => {
+        console.log(result.data);
+        // comments = result.data;
+        displayAllComments(result.data);
+    })
+}
 
+userComments ();
 
 const updatedDate = (realDate) => {
-    let currentDate = new Date();
+    let currentDate = new Date(realDate);
     let month = currentDate.getMonth();
     let day = currentDate.getDate();
     let year = currentDate.getFullYear();
     const fullDate = month + "/" + day + "/" + year;
     return fullDate
-    console.log(updatedDate);
 }
 
 
@@ -68,7 +70,7 @@ function displayAllComments(array){
     
         const viewDate = document.createElement('p');
         viewDate.classList.add("view-date");
-        viewDate.innerText = comment.fullDate;
+        viewDate.innerText = updatedDate(comment.timestamp);
         viewComments.appendChild(viewDate);
     
     
@@ -94,16 +96,19 @@ commentsForm.addEventListener('submit', (b)  => {
 
     const newComment = {
         name: b.target.user_name.value,
-        date: new Date().toLocaleDateString(),
-        text: b.target.user_comment.value
+        // date: new Date().toLocaleDateString(),
+        comment: b.target.user_comment.value
     }
     
-    defaultComment.unshift(newComment);
+    // defaultComments.unshift(newComment);
     const viewContainers = document.querySelectorAll(".view-container");
     viewContainers.forEach((container)  => {
         container.remove()
     })
-    displayAllComments();
+    // displayAllComments();
+    axios.post(liveComments, newComment) .then(result => {
+        userComments();
+    })
     b.target.reset();
 })
 
