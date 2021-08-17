@@ -405,12 +405,31 @@ span {
   }
 }
 
+.comments-mohan {
+  position: absolute;
+  top: 243rem;
+}
+@media (min-width: 768px) {
+  .comments-mohan {
+    position: absolute;
+    top: 141rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments-mohan {
+    position: absolute;
+    top: 175.5rem;
+    left: 18rem;
+  }
+}
+
 .comments-form {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   border-bottom: inset;
   padding-bottom: 1rem;
+  margin-left: 2rem;
 }
 @media (min-width: 768px) {
   .comments-form {
@@ -507,15 +526,16 @@ span {
 
 .view-date {
   color: #afafaf;
+  font-size: 13.8px;
 }
 @media (min-width: 768px) {
   .view-date {
-    padding-left: 18.19rem;
+    padding-left: 18rem;
   }
 }
 @media (min-width: 1280px) {
   .view-date {
-    padding-left: 30.19rem;
+    padding-left: 30rem;
   }
 }
 

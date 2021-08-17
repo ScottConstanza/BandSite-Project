@@ -350,12 +350,31 @@ span{
     }
 }
 
+
+.comments-mohan{
+    position: absolute;
+    top: 243rem;
+
+    @include tablet{
+        position: absolute;
+        top: 141rem;
+    }
+
+    @include desktop{
+        position: absolute;
+        top: 175.5rem;
+        left: 18rem;
+    }
+
+}
+
 .comments-form{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     border-bottom: inset;
     padding-bottom: 1rem;
+    margin-left: 2rem;
 
     @include tablet{
         margin-left: 4rem;
@@ -442,13 +461,14 @@ span{
 
 .view-date{
     color: #afafaf;
+    font-size: 13.8px;
 
     @include tablet{
-        padding-left: 18.19rem;
+        padding-left: 18rem;
     }
 
     @include desktop{
-        padding-left: 30.19rem;
+        padding-left: 30rem;
     }
 }
 
